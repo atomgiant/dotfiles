@@ -3,10 +3,24 @@ dotfiles
 
 All my local configuration goodness - VIM, shell, etc
 
-## For Command-T, run the following
+## First run the following to setup symlinks
+
+```
+./init.rb
+```
+
+## Now setup the submodules
+```
+git submodule init
+git submodule update
+```
+
+## Next to setup Command-T, run the following
 ```
 cd ~/.dotfiles/.vim/bundle/Command-T/ruby/command-t
 ruby extconf.rb
 make
 ```
+
+
 

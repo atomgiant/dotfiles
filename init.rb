@@ -11,6 +11,3 @@ symlinks.each do |source, target|
   `ln -s "#{File.expand_path(source)}" "#{File.expand_path(target)}"`
 end
 
-# initialize submodules
-`git submodule init`
-`git submodule update`
