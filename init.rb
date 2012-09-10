@@ -3,7 +3,10 @@
 symlinks = {
   # source => target
   './.vimrc' => '~/.vimrc',
-  './.gvimrc' => '~/.gvimrc'
+  './.gvimrc' => '~/.gvimrc',
+  './.zshrc' => '~/.zshrc',
+  './.zshenv' => '~/.zshenv',
+  './zsh' => '~/.zsh',
 }
 
 symlinks.each do |source, target|

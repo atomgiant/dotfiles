@@ -22,5 +22,8 @@ ruby extconf.rb
 make
 ```
 
-
+## Set zsh as default shell
+```
+chsh -s /bin/zsh
+```
 
