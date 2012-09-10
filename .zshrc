@@ -11,3 +11,4 @@ source ~/.zsh/zsh_hooks.zsh
 source ~/.zsh/rake_completion.zsh
 source ~/.zsh/bundle_exec.zsh
 source ~/.zsh/zmv.zsh
+source ~/.tad_env
