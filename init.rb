@@ -2,11 +2,14 @@
 
 symlinks = {
   # source => target
+  './.vim' => '~/.vim',
   './.vimrc' => '~/.vimrc',
   './.gvimrc' => '~/.gvimrc',
   './.zshrc' => '~/.zshrc',
   './.zshenv' => '~/.zshenv',
   './zsh' => '~/.zsh',
+  './.gitconfig' => '~/.gitconfig',
+  './gitignore_global' => '~/.gitignore_global',
 }
 
 symlinks.each do |source, target|
