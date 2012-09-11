@@ -16,8 +16,10 @@ git submodule update
 ```
 
 ## Next to setup Command-T, run the following
+### NOTE: You MUST use ruby 1.8.7 for this step
 ```
-cd ~/.dotfiles/.vim/bundle/Command-T/ruby/command-t
+cd DOTFILES_HOME/.vim/bundle/Command-T/ruby/command-t
+bundle install
 ruby extconf.rb
 make
 ```
