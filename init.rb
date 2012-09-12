@@ -9,7 +9,7 @@ symlinks = {
   './.zshenv' => '~/.zshenv',
   './zsh' => '~/.zsh',
   './.gitconfig' => '~/.gitconfig',
-  './gitignore_global' => '~/.gitignore_global',
+  './.gitignore_global' => '~/.gitignore_global',
 }
 
 symlinks.each do |source, target|

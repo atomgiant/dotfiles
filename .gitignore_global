@@ -1,7 +1,7 @@
-vendor/ruby
-public/assets
-.bundle
 *.log
+.bundle
 .rbenv-version
 coverage*
 doc/tags
+public/assets
+vendor/ruby
