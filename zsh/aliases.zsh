@@ -22,6 +22,7 @@ alias pow-restart='touch tmp/restart.txt'
 
 # Bundler
 alias b='bundle'
+alias be='bundle exec'
 alias bi='bundle install --path vendor'
 
 # Misc
