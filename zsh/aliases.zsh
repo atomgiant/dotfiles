@@ -25,6 +25,10 @@ alias b='bundle'
 alias be='bundle exec'
 alias bi='bundle install --path vendor'
 
+# Postgres
+alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+
 # Misc
 alias listening_ports='lsof -i -n -P | grep LISTEN'   # Show which processes are using which ports
 
