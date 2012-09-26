@@ -1,9 +1,9 @@
-bundled_commands=(cap capify cucumber ey foreman guard heroku rails rake rspec ruby spec spork testdrb unicorn unicorn_rails serve spin kicker pry-remote)
+bundled_commands=(cap capify cucumber ey foreman guard heroku knife rails rake rspec ruby spec spork testdrb unicorn unicorn_rails serve spin kicker pry-remote)
 
 ## Functions
 
 _bundler-installed() {
-  which bundle > /dev/null 2>&1
+  bundle -v > /dev/null 2>&1
 }
 
 _within-bundled-project() {
