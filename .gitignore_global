@@ -1,7 +1,7 @@
 *.log
+.DS_Store
 .bundle
 .rbenv-version
 coverage*
 doc/tags
-public/assets
 vendor/ruby
