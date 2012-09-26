@@ -70,7 +70,7 @@ function git_branch_prompt () {
 }
 
 function colorize() {
-  local c="${${KEYMAP/vicmd/yellow}/(main|viins)/gray}"
+  local c="${${KEYMAP/vicmd/green}/(main|viins)/gray}"
   echo "%{$fg[$c]%}$1%{$reset_color%}"
 }
 
@@ -79,5 +79,5 @@ function dir_prompt {
 }
 
 
-PROMPT='$(dir_prompt)$(git_branch_prompt)$(git_status_prompt)$(pair_prompt) > '
+PROMPT='$(dir_prompt)$(git_branch_prompt)$(git_status_prompt)$(pair_prompt) $(colorize \>) '
 
