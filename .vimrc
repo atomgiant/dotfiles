@@ -19,7 +19,7 @@ set viminfo='10,\"100,:20,%,n~/.viminfo       " remember certain things when we 
 set autoread                                  " reload files changed outside of Vim
 set autowrite                                 " some commands should cause an automatic write
 set nrformats=                                " improves incrementing when there are leading 0's.
-
+set tags=.git/tags,tags                       " search current, then root tags
 
 " ----------------------------------------------------------------------------
 "  UI
