@@ -55,3 +55,6 @@
 [submodule ".vim/bundle/vim-abolish"]
 	path = .vim/bundle/vim-abolish
 	url = git://github.com/tpope/vim-abolish.git
+[submodule ".vim/bundle/hexmode"]
+	path = .vim/bundle/hexmode
+	url = git://github.com/fidian/hexmode.git

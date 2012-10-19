@@ -238,6 +238,10 @@ nnoremap <leader>gg :topleft 100 :split Gemfile<cr>
 nnoremap <leader>r :Rake<CR>
 nnoremap <leader>R :.Rake<CR>
 
+" hex mode
+nnoremap <C-H> :Hexmode<CR>
+inoremap <C-H> <Esc>:Hexmode<CR>
+vnoremap <C-H> :<C-U>Hexmode<CR>
 
 " ---------------------------------------------------------------------------
 "  primary rails navigation
