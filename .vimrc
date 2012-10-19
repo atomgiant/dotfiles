@@ -239,9 +239,7 @@ nnoremap <leader>r :Rake<CR>
 nnoremap <leader>R :.Rake<CR>
 
 " hex mode
-nnoremap <C-H> :Hexmode<CR>
-inoremap <C-H> <Esc>:Hexmode<CR>
-vnoremap <C-H> :<C-U>Hexmode<CR>
+nnoremap <leader><leader>x :Hexmode<CR>
 
 " ---------------------------------------------------------------------------
 "  primary rails navigation
