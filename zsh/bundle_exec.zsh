@@ -1,4 +1,4 @@
-bundled_commands=(cap capify cucumber ey foreman guard heroku knife rails rake rspec ruby spec spork testdrb unicorn unicorn_rails serve spin kicker pry-remote)
+bundled_commands=(cap capify cucumber ey foreman guard knife rails rake rspec ruby spec spork testdrb unicorn unicorn_rails serve spin kicker pry-remote)
 
 ## Functions
 

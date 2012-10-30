@@ -1,4 +1,5 @@
 *.log
+.powrc
 .DS_Store
 .bundle
 .rbenv-version
