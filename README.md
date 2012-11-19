@@ -29,3 +29,8 @@ make
 chsh -s /bin/zsh
 ```
 
+## Rebuild the help tags by firing up mvim and running
+```
+:Helptags
+```
+
