@@ -1,6 +1,8 @@
-# ignore coverage tests
--G^(?!coverage/*).*$
-
-# Add haml, rake and less to search types
---type-add=ruby=.haml,.rake
---type-add=css=.less
+--type-add=ruby=.haml,.rake,.feature,.snippet,.sass,.scss,.slim,.markdown,.textile
+---type-add=css=.less
+--ignore-dir=coverage
+--ignore-dir=vendor/ruby
+--ignore-dir=.bundle/ruby
+--ignore-dir=tmp
+--ignore-dir=public/assets
+--ignore-dir=vendor/assets
