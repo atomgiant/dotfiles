@@ -1,0 +1,6 @@
+# ignore coverage tests
+-G^(?!coverage/*).*$
+
+# Add haml, rake and less to search types
+--type-add=ruby=.haml,.rake
+--type-add=css=.less

@@ -10,6 +10,7 @@ symlinks = {
   './zsh' => '~/.zsh',
   './.gitconfig' => '~/.gitconfig',
   './.gitignore_global' => '~/.gitignore_global',
+  './.ackrc' => '~/.ackrc',
 }
 
 symlinks.each do |source, target|
