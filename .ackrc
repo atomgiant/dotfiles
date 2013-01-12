@@ -1,5 +1,5 @@
 --type-add=ruby=.haml,.rake,.feature,.snippet,.sass,.scss,.slim,.markdown,.textile
----type-add=css=.less
+--type-add=css=.less
 --ignore-dir=coverage
 --ignore-dir=vendor/ruby
 --ignore-dir=.bundle/ruby
