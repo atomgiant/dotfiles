@@ -42,15 +42,6 @@ set showcmd                     " show size of visual selection
 set wildmenu                    " show possible matches for command completions using tab
 set wildmode=list:longest,full  " full list using common string. Then full complete.
 
-
-" ----------------------------------------------------------------------------
-"  NerdTree config
-" ----------------------------------------------------------------------------
-let NERDTreeWinSize=31                " how wide nerdtree ought to be
-let NERDTreeMinimalUI=1               " don't need to the noise
-let NERDTreeDirArrows=1               " prettier arrows
-
-
 " ----------------------------------------------------------------------------
 "  Tabs
 " ----------------------------------------------------------------------------
@@ -88,22 +79,18 @@ set nohlsearch              " don't highlight searches
 " Mappings
 " ---------------------------------------------------------------------------
 
-" show/hide nerdtree
-nnoremap <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
-
-" highlight the current buffer in the nerdtree
-nnoremap <leader>n :NERDTreeFind<CR>
-
-" make it easy to move to adjacent files in the dir
-nmap gj :NERDTreeFind<CR><C-j><Enter>
-nmap gk :NERDTreeFind<CR><C-k><Enter>
-
 " navigating search results
 nnoremap <leader>1 :cprevious <CR>
 nnoremap <leader>2 :cnext <CR>
 
 " space is much easier to press than %
 map <space> %
+
+" show the netrw of the current directory
+nnoremap <leader>d :e .<CR>
+
+" show the netrw of the directory of the current buffer
+nnoremap <leader>n :Explore<CR>
 
 " clean up cucumber tables
 nnoremap <leader>= :Tabularize /\|<CR>
