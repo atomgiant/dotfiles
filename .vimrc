@@ -320,7 +320,7 @@ endif
 set hidden                                    " Let me leave buffers even when they're changed.
 
 " Write all named, changed buffers when Vim loses focus
-au FocusLost * :wall
+au BufLeave,FocusLost * silent! :wall
 
 
 " ---------------------------------------------------------------------------
