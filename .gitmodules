@@ -58,3 +58,6 @@
 [submodule ".vim/bundle/hexmode"]
 	path = .vim/bundle/hexmode
 	url = git://github.com/fidian/hexmode.git
+[submodule ".vim/bundle/tabular"]
+	path = .vim/bundle/tabular
+	url = git://github.com/godlygeek/tabular.git

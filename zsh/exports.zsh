@@ -1,5 +1,8 @@
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$HOME/bin:/opt/local/bin:/opt/local/sbin:$PATH
 
+# add npm module binaries to path
+export PATH=$PATH:./node_modules/.bin
+
 # Our list of directories we can cd to from anywhere
 export CDPATH=.:~/dev
 
