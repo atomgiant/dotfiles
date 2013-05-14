@@ -34,3 +34,8 @@ chsh -s /bin/zsh
 :Helptags
 ```
 
+## To add new plugins, find a GitHub repo and add it as a submodule, e.g.:
+
+```
+  git submodule add git://github.com/xolox/vim-notes.git .vim/bundle/vim-notes
+```
