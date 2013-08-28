@@ -55,6 +55,8 @@ let NERDTreeDirArrows=1               " prettier arrows
 "  Notes config
 " ----------------------------------------------------------------------------
 let g:notes_directories = ['~/Documents/Notes']
+let g:notes_suffix = '.txt'
+let g:notes_title_sync = 'change_title'
 
 " ----------------------------------------------------------------------------
 "  Tabs

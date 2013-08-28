@@ -11,6 +11,9 @@ symlinks = {
   './.gitconfig' => '~/.gitconfig',
   './.gitignore_global' => '~/.gitignore_global',
   './.ackrc' => '~/.ackrc',
+  './.emacs' => '~/.emacs',
+  './emacs' => '~/emacs',
+  './bin/timeclock.rb' => '~/bin/'
 }
 
 symlinks.each do |source, target|
