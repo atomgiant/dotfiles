@@ -19,6 +19,9 @@ export GREP_COLOR='3;33'
 export GIT_EDITOR="vim"
 export EDITOR='vim'
 
+# enable Active Merchant debugging
+export DEBUG_ACTIVE_MERCHANT=true
+
 ulimit -n 2048
 
 
