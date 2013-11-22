@@ -45,6 +45,6 @@ alias zr='zeus rspec'
 alias zk='zeus rake'
 
 # timeclock
-alias tc='/Users/tdavies/dev/emacs-timeclock-reporter/timeclock.rb'
-alias tct='/Users/tdavies/dev/emacs-timeclock-reporter/timeclock.rb -ts -g 99'
-alias tcw='/Users/tdavies/dev/emacs-timeclock-reporter/timeclock.rb -w -g 99'
+alias tc='/Users/tdavies/dev/timeclock/timeclock.rb'
+alias tct='/Users/tdavies/dev/timeclock/timeclock.rb -ts -g 99'
+alias tcw='/Users/tdavies/dev/timeclock/timeclock.rb -w -g 99'
