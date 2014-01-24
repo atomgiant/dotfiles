@@ -2,8 +2,6 @@
 .powrc
 .DS_Store
 .bundle
-.ruby-version
-.rbenv-version
 coverage*
 doc/tags
 emacs/timelog*
