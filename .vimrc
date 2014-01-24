@@ -1,13 +1,39 @@
 
 " ---------------------------------------------------------------------------
-" Pathogen initialization
+" Vundle initialization
 " ---------------------------------------------------------------------------
 filetype off
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-filetype plugin indent on                     " load filetype plugin
-" call pathogen#helptags()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
+" let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+" My bundles
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'bronson/vim-trailing-whitespace'
+Bundle 'kien/ctrlp.vim'
+Bundle 'edsono/vim-matchit'
+Bundle 'fidian/hexmode'
+Bundle 'godlygeek/tabular'
+Bundle 'kana/vim-textobj-user'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'mattn/emmet-vim'
+Bundle 'mileszs/ack.vim'
+Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'pangloss/vim-javascript'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-abolish'
+Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-rake'
+Bundle 'tpope/vim-surround'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'xolox/vim-misc'
+Bundle 'xolox/vim-notes'
 
 " ---------------------------------------------------------------------------
 " General
@@ -20,6 +46,7 @@ set autoread                                  " reload files changed outside of 
 set autowrite                                 " some commands should cause an automatic write
 set nrformats=                                " improves incrementing when there are leading 0's.
 set tags=.git/tags,tags                       " search current, then root tags
+
 
 " ----------------------------------------------------------------------------
 "  UI
@@ -140,9 +167,9 @@ map <leader>K [M
 " add the dir of the current file to the command
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
-" command-t plugin
-silent! nmap <unique> <silent> <Leader>f :CommandT<CR>
-nnoremap <leader>F :CommandTFlush<CR>:CommandT<CR>
+" ctrlp plugin
+nnoremap <leader>f :CtrlP<CR>
+nnoremap <leader>F :CtrlPClearCache<CR>:CtrlP<CR>
 
 set wildignore+=vendor/plugins/**,vendor/ruby/**,vendor/gems/**,vendor/cache/**,vendor/rails/**,public/assets/**,coverage/**,tmp/**,data/**
 
@@ -236,9 +263,6 @@ nnoremap go <c-^>
 " switch to a 1.9 hash
 nnoremap <leader>y F:xea:<esc>llxxx
 
-" Command-T of the directory of the current file
-map <leader>gf :CommandT %%<cr>
-
 " some rails helpers
 nnoremap <leader>gr :topleft :split config/routes.rb<cr>
 nnoremap <leader>gg :topleft 100 :split Gemfile<cr>
@@ -251,23 +275,24 @@ nnoremap <leader><leader>x :Hexmode<CR>
 " ---------------------------------------------------------------------------
 "  primary rails navigation
 " ---------------------------------------------------------------------------
-nnoremap <leader><leader>m :CommandT app/models<cr>
-nnoremap <leader><leader>v :CommandT app/views<cr>
-nnoremap <leader><leader>c :CommandT app/controllers<cr>
-nnoremap <leader><leader>h :CommandT app/helpers<cr>
-nnoremap <leader><leader>l :CommandT lib<cr>
-nnoremap <leader><leader>f :CommandT features<cr>
-nnoremap <leader><leader>u :CommandT test/unit<cr>
-nnoremap <leader><leader>r :CommandT spec<cr>
-nnoremap <leader><leader>a :CommandT api<cr>
-nnoremap <leader><leader>o :CommandT doc<cr>
+nnoremap <leader><leader>m :CtrlP app/models<cr>
+nnoremap <leader><leader>v :CtrlP app/views<cr>
+nnoremap <leader><leader>c :CtrlP app/controllers<cr>
+nnoremap <leader><leader>h :CtrlP app/helpers<cr>
+nnoremap <leader><leader>l :CtrlP lib<cr>
+nnoremap <leader><leader>f :CtrlP features<cr>
+nnoremap <leader><leader>u :CtrlP test<cr>
+nnoremap <leader><leader>r :CtrlP spec<cr>
+nnoremap <leader><leader>o :CtrlP doc<cr>
+nnoremap <leader><leader>p :CtrlP app/presenters<cr>
+nnoremap <leader><leader>j :CtrlP app/assets/javascripts<cr>
+nnoremap <leader><leader>s :CtrlP app/assets/stylesheets<cr>
 
 nnoremap <leader><leader>i :Rinitializer<space>
 nnoremap <leader><leader>e :Renvironment<space>
 nnoremap <leader><leader>j :Rjavascript<space>
 nnoremap <leader><leader>t :Rtask<space>
 nnoremap <leader><leader>d :Rmigration<space>
-nnoremap <leader><leader>s :Rschema<space>
 
 " ---------------------------------------------------------------------------
 "  custom commands - use these at the : command prompt
@@ -297,12 +322,6 @@ set statusline+=\[%{strlen(&ft)?&ft:'none'}] " file type
 set statusline+=%=                           " right align remainder
 set statusline+=%-14(%l,%c%V%)               " line, character
 set statusline+=%<%P                         " file position
-
-
-" ---------------------------------------------------------------------------
-"  Command-t customization
-" ---------------------------------------------------------------------------
-let g:CommandTMaxHeight=20
 
 " ---------------------------------------------------------------------------
 "  Gundo customization
