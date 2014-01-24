@@ -9,19 +9,9 @@ All my local configuration goodness - VIM, shell, etc
 ./init.rb
 ```
 
-## Now setup the submodules
+## Install vundle
 ```
-git submodule init
-git submodule update
-```
-
-## Next to setup Command-T, run the following
-### NOTE: You MUST use ruby 1.8.7 for this step
-```
-cd DOTFILES_HOME/.vim/bundle/command-t/ruby/command-t
-bundle install
-ruby extconf.rb
-make
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 ```
 
 ## Set zsh as default shell
@@ -29,13 +19,14 @@ make
 chsh -s /bin/zsh
 ```
 
-## Rebuild the help tags by firing up mvim and running
+## Fire up mvim and run and run the following:
+
+### Install vundle plugins
+```
+:BundleInstall
+```
+
+### Rebuild help tags
 ```
 :Helptags
-```
-
-## To add new plugins, find a GitHub repo and add it as a submodule, e.g.:
-
-```
-  git submodule add git://github.com/xolox/vim-notes.git .vim/bundle/vim-notes
 ```
