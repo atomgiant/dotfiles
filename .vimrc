@@ -11,7 +11,7 @@ Bundle 'gmarik/vundle'
 
 " My bundles
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'bronson/vim-trailing-whitespace'
+Bundle 'duff/vim-trailing-whitespace'
 Bundle 'kien/ctrlp.vim'
 Bundle 'edsono/vim-matchit'
 Bundle 'fidian/hexmode'
@@ -167,11 +167,7 @@ map <leader>K [M
 " add the dir of the current file to the command
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
-" ctrlp plugin
-nnoremap <leader>f :CtrlP<CR>
-nnoremap <leader>F :CtrlPClearCache<CR>:CtrlP<CR>
-
-set wildignore+=vendor/plugins/**,vendor/ruby/**,vendor/gems/**,vendor/cache/**,vendor/rails/**,public/assets/**,coverage/**,tmp/**,data/**
+set wildignore+=*/vendor/plugins/**,*/vendor/ruby/**,*/vendor/gems/**,*/vendor/cache/**,*/vendor/rails/**,*/public/assets/**,*/coverage/**,*/tmp/**,*/data/**
 
 " ack shortcuts
 nnoremap <leader>A :Ack<cword><CR>
@@ -271,6 +267,15 @@ nnoremap <leader>R :.Rake<CR>
 
 " hex mode
 nnoremap <leader><leader>x :Hexmode<CR>
+
+" ---------------------------------------------------------------------------
+"  CtrlP
+" ---------------------------------------------------------------------------
+nnoremap <leader>f :CtrlP<CR>
+nnoremap <leader>F :CtrlPClearCache<CR>:CtrlP<CR>
+
+let g:ctrlp_match_window = 'bottom,order:ttb,min:1,max:10,results:10'
+let g:ctrlp_clear_cache_on_exit = 0
 
 " ---------------------------------------------------------------------------
 "  primary rails navigation
