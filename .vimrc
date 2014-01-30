@@ -35,6 +35,8 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-notes'
 
+filetype plugin indent on     " required!
+
 " ---------------------------------------------------------------------------
 " General
 " ---------------------------------------------------------------------------
