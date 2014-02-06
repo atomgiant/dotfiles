@@ -277,7 +277,8 @@ nnoremap <leader>f :CtrlP<CR>
 nnoremap <leader>F :CtrlPClearCache<CR>:CtrlP<CR>
 
 let g:ctrlp_match_window = 'bottom,order:ttb,min:1,max:10,results:10'
-let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_working_path_mode = 0
+" let g:ctrlp_clear_cache_on_exit = 0
 
 " ---------------------------------------------------------------------------
 "  primary rails navigation
