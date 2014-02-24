@@ -90,7 +90,7 @@ let g:notes_title_sync = 'change_title'
 " ----------------------------------------------------------------------------
 "  Tabs
 " ----------------------------------------------------------------------------
-set tabstop=4
+set tabstop=2
 set softtabstop=2          " yep, two
 set shiftwidth=2
 set nosmarttab             " no tabs, thanks.
