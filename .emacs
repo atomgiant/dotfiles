@@ -87,7 +87,7 @@
 ; ****************************************
 (setq timeclock-file "~/emacs/timelog")
 (setq timeclock-relative nil)
-(setq timeclock-workday (* 8 60 60))
+(setq timeclock-workday (* 7 60 60))
 
 ; ****************************************
 ; TODO list
