@@ -1,0 +1,167 @@
+html {
+  font-family: 'SourceCodePro-Regular','Menlo', 'Lucida Grande', 'Seoge UI', 'Arial', sans-serif;
+  background-color: black; /* base3 */
+  color: #839496; /* base00 */
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 960px;
+  font-size: 12px;
+  line-height: 1.3em;
+}
+
+.url {
+  color: #d33682;
+  text-decoration: none;
+  border-bottom: 1px solid #d33682;
+}
+
+.highlight {
+  color: #fdf6e3;
+  padding: 3px 5px;
+  background: #2aa198;
+  margin: 0 3px 0 0;
+  font-weight: 500;
+}
+
+.line {
+  width: 80%;
+  float: right;
+  margin: 10px 10px 0 0;
+  position: relative;
+}
+
+.time {
+  color: #586e75;
+  display: block;
+  float: right;
+  position: absolute;
+  right: -55px;
+  width: 50px;
+}
+
+.place {
+  color: #586e75;
+  display: block;
+}
+
+.sender {
+  display: inline-block;
+  width: 15%;
+  margin-left: -18%;
+  text-align: right;
+  margin-right: 3%;
+}
+
+.sender[type=normal] {
+  color: #268bd2
+}
+
+.sender[type=myself] {
+  color: #586e75
+}
+
+.message[type=notice] {
+  color: #859900
+}
+
+.message[type=action] {
+  color: #b58900;
+  margin-left: 2%;
+}
+
+div[type=action] {
+  font-size: .9em
+}
+
+div[type=action] .sender {
+  padding-left: 3%;
+  border-left: 4px solid #b58900;
+  color: #b58900;
+  display: inline-block;
+  width: auto;
+  text-align: left;
+  margin-left: 0;
+}
+
+.message[type=system],
+.message[type=join],
+.message[type=part],
+.message[type=kick],
+.message[type=quit],
+.message[type=kill],
+.message[type=nick],
+.message[type=mode],
+.message[type=invite],
+.message[type=wallops] {
+  padding-left: 3%;
+  border-left: 4px solid #859900;
+  color: #586e75;
+  display: inline-block;
+  width: auto;
+  text-align: left;
+  margin-left: 0;
+}
+
+.inlineimage {
+  margin: 2em 0 1em 0;
+  height: auto;
+  max-width: 100%;
+  max-height: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  -webkit-transition: all linear 0.2s;
+}
+
+.inlineimage:hover {
+  -webkit-box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all linear 0.15s;
+}
+
+div[type=topic] {
+  margin-top: 1em
+}
+
+.message[type=topic],
+.message[type=reply] {
+  padding-left: 3%;
+  color: #6c71c4;
+  border-left: 4px solid #2aa198;
+  display: inline-block;
+  width: auto;
+  text-align: left;
+  margin-left: 0;
+}
+
+.message[type=error],
+.message[type=error_reply] {
+  color: #cb4b16
+}
+
+.message[type=dcc_send_send] {
+  color: #cb4b16
+}
+
+.message[type=dcc_send_receive] {
+  color: #cb4b16
+}
+
+.message[type=debug_send] {
+  color: #cb4b16
+}
+
+.message[type=debug_receive] {
+  color: #cb4b16
+}
+
+@media screen and (max-width:720px) {
+  body {
+    font-size: 12px
+  }
+}
