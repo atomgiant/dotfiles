@@ -9,7 +9,6 @@ html {
 body {
   margin: 0 auto;
   width: 100%;
-  max-width: 960px;
   font-size: 12px;
   line-height: 1.3em;
 }
@@ -51,10 +50,10 @@ body {
 
 .sender {
   display: inline-block;
-  width: 15%;
-  margin-left: -18%;
+  width: 200px;
+  margin-left: -220px;
   text-align: right;
-  margin-right: 3%;
+  margin-right: 20px;
 }
 
 .sender[type=normal] {
@@ -160,8 +159,11 @@ div[type=topic] {
   color: #cb4b16
 }
 
-@media screen and (max-width:720px) {
+@media screen and (min-width:1000px) {
   body {
     font-size: 12px
+  }
+  .line {
+    width: 90%;
   }
 }
