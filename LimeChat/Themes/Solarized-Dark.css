@@ -115,6 +115,7 @@ div[type=action] .sender {
   box-shadow: none;
   border: none;
   -webkit-transition: all linear 0.2s;
+  max-height: 250px;
 }
 
 .inlineimage:hover {
