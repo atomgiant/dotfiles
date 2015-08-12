@@ -10,31 +10,34 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " My bundles
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'duff/vim-trailing-whitespace'
-Bundle 'kien/ctrlp.vim'
-Bundle 'edsono/vim-matchit'
-Bundle 'fidian/hexmode'
-Bundle 'godlygeek/tabular'
-Bundle 'kana/vim-textobj-user'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'mattn/emmet-vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'pangloss/vim-javascript'
-Bundle 'scrooloose/nerdtree'
-Bundle 'Townk/vim-autoclose'
-Bundle 'tpope/vim-abolish'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-rake'
-Bundle 'tpope/vim-surround'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'xolox/vim-misc'
-Bundle 'xolox/vim-notes'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'chrisbra/csv.vim'
+Plugin 'duff/vim-trailing-whitespace'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'kien/ctrlp.vim'
+Plugin 'edsono/vim-matchit'
+Plugin 'fidian/hexmode'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'kana/vim-textobj-user'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'mattn/emmet-vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'pangloss/vim-javascript'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Townk/vim-autoclose'
+Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-liquid'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-rake'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-notes'
 
 filetype plugin indent on     " required!
 
@@ -49,6 +52,8 @@ set autoread                                  " reload files changed outside of 
 set autowrite                                 " some commands should cause an automatic write
 set nrformats=                                " improves incrementing when there are leading 0's.
 set tags=.git/tags,tags                       " search current, then root tags
+set foldmethod=syntax
+set foldlevel=99
 
 
 " ----------------------------------------------------------------------------
@@ -69,8 +74,8 @@ set laststatus=2                " always show the status line
 set visualbell                  " quiet
 set noerrorbells                " quiet
 set showcmd                     " show size of visual selection
+set wildmode=longest,list,full  " longest common string, then list, then full
 set wildmenu                    " show possible matches for command completions using tab
-set wildmode=list:longest,full  " full list using common string. Then full complete.
 
 
 " ----------------------------------------------------------------------------
@@ -142,9 +147,6 @@ nnoremap <leader>2 :cnext <CR>
 " space is much easier to press than %
 map <space> %
 
-" clean up cucumber tables
-nnoremap <leader>= :Tabularize /\|<CR>
-
 " move between windows
 nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
@@ -170,7 +172,7 @@ map <leader>K [M
 " add the dir of the current file to the command
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
-set wildignore+=*/vendor/plugins/**,*/vendor/ruby/**,*/vendor/gems/**,*/vendor/cache/**,*/vendor/rails/**,*/public/assets/**,*/coverage/**,*/tmp/**,*/data/**
+set wildignore+=*/vendor/plugins/**,*/vendor/ruby/**,*/vendor/gems/**,*/vendor/cache/**,*/vendor/rails/**,*/public/assets/**,*/coverage/**,*/tmp/**
 
 " ack shortcuts
 nnoremap <leader>A :Ack<cword><CR>
@@ -280,6 +282,15 @@ nnoremap <leader>F :CtrlPClearCache<CR>:CtrlP<CR>
 let g:ctrlp_match_window = 'bottom,order:ttb,min:1,max:10,results:10'
 let g:ctrlp_working_path_mode = 0
 " let g:ctrlp_clear_cache_on_exit = 0
+
+" ---------------------------------------------------------------------------
+"  EasyAlign
+" ---------------------------------------------------------------------------
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 " ---------------------------------------------------------------------------
 "  primary rails navigation
@@ -411,6 +422,13 @@ augroup END
 
 let g:liquid_highlight_types=["html","erb=eruby","html+erb=eruby.html"]
 
+" vim-liquid: Set subtype for Shopify alternate templates
+au BufNewFile,BufRead */templates/**.liquid,*/layout/**.liquid,*/snippets/**.liquid
+      \ let b:liquid_subtype = 'html' |
+      \ set ft=liquid |
+au BufNewFile,BufRead */assets/**.js.liquid
+      \ let b:liquid_subtype = 'javascript' |
+      \ set ft=liquid |
 
 " ---------------------------------------------------------------------------
 "  Jump to last saved position of buffer when re-opening

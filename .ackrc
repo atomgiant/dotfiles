@@ -1,9 +1,14 @@
 --type-add=ruby=.haml,.rake,.feature,.snippet,.sass,.scss,.slim,.markdown,.textile,.coffee
 --type-add=css=.less
+--type-add=perl=.pl,.pm
+--type-add=php=.php
+--type-add=liquid=.liquid
 --ignore-dir=.bundle/ruby
 --ignore-dir=coverage
 --ignore-dir=data
+--ignore-dir=db/sphinx
 --ignore-dir=feed
+--ignore-dir=log
 --ignore-dir=public/assets
 --ignore-dir=tmp
 --ignore-dir=vendor/assets
