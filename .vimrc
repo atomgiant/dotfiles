@@ -63,9 +63,14 @@ set ruler                             " show the cursor position all the time
 set backspace=start,indent,eol        " allow backspacing over anything in insert mode
 set wm=2                              " wrap margin on the right
 set scrolloff=2                       " keep some context when scrolling
-set nowrap                            " do not wrap lines
 set antialias                         " of course
 
+" wrap config
+set wrap
+set linebreak
+set nolist     " list disables linebreak
+set textwidth=0
+set wrapmargin=0
 
 " ----------------------------------------------------------------------------
 "  Visual cues
