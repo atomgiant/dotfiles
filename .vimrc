@@ -38,6 +38,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
+Plugin 'mxw/vim-jsx'
 
 filetype plugin indent on     " required!
 
