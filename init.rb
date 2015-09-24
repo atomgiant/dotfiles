@@ -10,6 +10,7 @@ symlinks = {
   './zsh' => '~/.zsh',
   './.gitconfig' => '~/.gitconfig',
   './.gitignore_global' => '~/.gitignore_global',
+  './git/git_template' => '~/.git_template',
   './.ackrc' => '~/.ackrc',
   './.emacs' => '~/.emacs',
   './emacs' => '~/emacs',
