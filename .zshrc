@@ -12,3 +12,5 @@ source ~/.zsh/rake_completion.zsh
 source ~/.zsh/bundle_exec.zsh
 source ~/.zsh/zmv.zsh
 source ~/.env
+
+eval "$(rbenv init -)"

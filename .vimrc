@@ -33,6 +33,7 @@ Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-liquid'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-rake'
+Plugin 'tpope/vim-ragtag'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-ruby/vim-ruby'
@@ -364,12 +365,18 @@ let g:ctags_statusline=1
 " ---------------------------------------------------------------------------
 syntax on
 
-
 " ---------------------------------------------------------------------------
 "  Surround plugin - allow # to be used for string interpolation.
 " ---------------------------------------------------------------------------
 autocmd FileType ruby let g:surround_113 = "#{\r}"   " v
 autocmd FileType ruby let g:surround_35  = "#{\r}"   " #
+
+" ---------------------------------------------------------------------------
+"  Ragtag plugin
+" ---------------------------------------------------------------------------
+inoremap <M-o>       <Esc>o
+inoremap <C-j>       <Down>
+let g:ragtag_global_maps = 1
 
 " ---------------------------------------------------------------------------
 " persistent undo
@@ -386,18 +393,6 @@ set hidden                                    " Let me leave buffers even when t
 
 " Write all named, changed buffers when Vim loses focus
 au BufLeave,FocusLost * silent! :wall
-
-
-" ---------------------------------------------------------------------------
-"  omnicomplete
-" ---------------------------------------------------------------------------
-set ofu=syntaxcomplete#Complete
-autocmd FileType ruby set omnifunc=rubycomplete#Complete
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-
 
 " ---------------------------------------------------------------------------
 "  Misc stuff

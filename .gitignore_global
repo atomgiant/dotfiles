@@ -1,4 +1,5 @@
 *.log
+.env
 .powrc
 .DS_Store
 .bundle
