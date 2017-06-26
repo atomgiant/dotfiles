@@ -45,9 +45,7 @@
 (add-to-list 'load-path "~/emacs")
 
 (load "calc.el")
-(load "bja-growl")  ;; bja-common refers to bja-growl
 (load "bja-common")
-(load "bja-adium")
 (load "bja-deft")
 (put 'downcase-region 'disabled nil)
 

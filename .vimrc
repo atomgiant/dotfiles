@@ -15,9 +15,7 @@ Plugin 'chrisbra/csv.vim'
 Plugin 'duff/vim-trailing-whitespace'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'kien/ctrlp.vim'
-Plugin 'edsono/vim-matchit'
 Plugin 'fidian/hexmode'
-Plugin 'junegunn/vim-easy-align'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mattn/emmet-vim'
@@ -29,7 +27,6 @@ Plugin 'Townk/vim-autoclose'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-liquid'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-rake'
@@ -40,7 +37,10 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
 Plugin 'mxw/vim-jsx'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
+runtime macros/matchit.vim
 filetype plugin indent on     " required!
 
 " ---------------------------------------------------------------------------
@@ -179,7 +179,8 @@ map <leader>K [M
 " add the dir of the current file to the command
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
-set wildignore+=*/vendor/plugins/**,*/vendor/ruby/**,*/vendor/gems/**,*/vendor/cache/**,*/vendor/rails/**,*/public/assets/**,*/coverage/**,*/tmp/**
+set wildignore+=*/vendor/plugins/**,*/vendor/ruby/**,*/vendor/gems/**,*/vendor/cache/**,*/vendor/rails/**,*/public/assets/**,*/coverage/**,*/tmp/**,*/node_modules/**,*/deps/**,*/priv/**
+
 
 " ack shortcuts
 nnoremap <leader>A :Ack<cword><CR>
@@ -415,10 +416,6 @@ augroup myfiletypes
 
   "for ruby, autoindent with two spaces, always expand tabs
   autocmd FileType ruby,haml,eruby,yaml set ai sw=2 sts=2 et
-augroup END
-
-augroup markdown
-  autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:>
 augroup END
 
 let g:liquid_highlight_types=["html","erb=eruby","html+erb=eruby.html"]
