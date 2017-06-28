@@ -28,12 +28,6 @@ alias listening_ports='lsof -i -n -P | grep LISTEN'   # Show which processes are
 # zmv
 alias mmv='noglob zmv -W'
 
-# zeus
-alias zg='zeus generate'
-alias zc='zeus console'
-alias zr='zeus rspec'
-alias zk='zeus rake'
-
 # timeclock
 alias tc='/Users/tdavies/dev/timeclock/timeclock.rb'
 alias tct='/Users/tdavies/dev/timeclock/timeclock.rb -ts -g 99'
