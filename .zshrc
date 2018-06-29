@@ -14,3 +14,4 @@ source ~/.zsh/zmv.zsh
 source ~/.env
 
 eval "$(rbenv init -)"
+export PATH="/usr/local/opt/openssl/bin:$PATH"

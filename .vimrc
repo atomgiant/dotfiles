@@ -39,6 +39,7 @@ Plugin 'xolox/vim-notes'
 Plugin 'mxw/vim-jsx'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'yegappan/greplace'
 
 runtime macros/matchit.vim
 filetype plugin indent on     " required!
@@ -66,6 +67,7 @@ set backspace=start,indent,eol        " allow backspacing over anything in inser
 set wm=2                              " wrap margin on the right
 set scrolloff=2                       " keep some context when scrolling
 set antialias                         " of course
+set synmaxcol=200                     " limit syntax highlighting for long lines
 
 " wrap config
 set wrap

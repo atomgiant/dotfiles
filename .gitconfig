@@ -29,16 +29,35 @@
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   ls = ls-files
-  # from https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/
+  ; FROM BEN
+  ; ci = commit
+	; co = checkout
+	; dc = diff --cached
+	; f = fetch
+	; gl = log -12 --color=always --all --graph --topo-order --pretty='format:%Cgreen%h%Creset %s %C(black bold)(by %an)%Creset%C(yellow bold)%d%Creset%n'
+	; gll = log --color=always --all --graph --topo-order --pretty='format:%Cgreen%h%Creset %s %C(black bold)(by %an)%Creset%C(yellow bold)%d%Creset%n'
+	; hist = log --oneline --decorate --graph
+	; l = log -18 --color=always --all --topo-order --pretty='format:%Cgreen%h%Creset %s%Cred%d%Creset %C(black bold)(by %an)%Creset'
+	; ll = log --color=always --all --topo-order --pretty='format:%Cgreen%h%Creset %s%Cred%d%Creset %C(black bold)(by %an)%Creset'
+	; mf = merge --ff-only
+	; mop = fetch --prune
+	; ob = clean -fdx
+	; pu = push -u
+	; rbo = rebase origin/master
+	; rs = reset --hard
+	; sa = stash --include-untracked
+	; st = status
+	; wn = log ..origin/master
+  ; from https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/
   stats = shortlog -sn --all --no-merges
   recent = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)"
   overview = log --all --oneline --no-merges
   recap = log --all --oneline --no-merges --author=atomgiant@gmail.com
   today = log --since=00:00:00 --all --no-merges --oneline --author=atomgiant@gmail.com
   graph = log --graph --all --decorate --stat --date=iso
-  # must pass in ..origin/branch
+  ; must pass in ..origin/branch
   upstream = log --oneline --no-merges
-  # must pass in origin/branch..
+  ; must pass in origin/branch..
   local = log --oneline --no-merges
 
 
