@@ -71,3 +71,5 @@
 	templatedir = ~/.git_template
 [push]
 	default = current
+[merge]
+	tool = gvimdiff

@@ -40,6 +40,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'yegappan/greplace'
+Plugin 'chrisbra/Colorizer'
 
 runtime macros/matchit.vim
 filetype plugin indent on     " required!
@@ -367,6 +368,10 @@ let g:ctags_statusline=1
 "  Colors/Theme
 " ---------------------------------------------------------------------------
 syntax on
+
+" Colorizer
+" let g:colorizer_auto_filetype='scss,css,html,erb'
+" let g:colorizer_skip_comments = 1
 
 " ---------------------------------------------------------------------------
 "  Surround plugin - allow # to be used for string interpolation.

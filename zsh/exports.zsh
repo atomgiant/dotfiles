@@ -18,6 +18,7 @@ export GREP_COLOR='3;33'
 
 export GIT_EDITOR="vim"
 export EDITOR='vim'
+export THOR_MERGE='gvimdiff'
 
 # enable Active Merchant debugging
 export DEBUG_ACTIVE_MERCHANT=true
