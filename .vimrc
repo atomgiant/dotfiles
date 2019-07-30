@@ -10,18 +10,15 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " My bundles
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'chrisbra/csv.vim'
 Plugin 'duff/vim-trailing-whitespace'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'kien/ctrlp.vim'
 Plugin 'fidian/hexmode'
 Plugin 'kana/vim-textobj-user'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'mattn/emmet-vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Townk/vim-autoclose'
 Plugin 'tpope/vim-abolish'
@@ -36,11 +33,12 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
-Plugin 'mxw/vim-jsx'
 Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
 Plugin 'yegappan/greplace'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'chrisbra/Colorizer'
+Plugin 'othree/html5.vim'
+Plugin 'plasticboy/vim-markdown'
 
 runtime macros/matchit.vim
 filetype plugin indent on     " required!
@@ -427,13 +425,16 @@ augroup END
 
 let g:liquid_highlight_types=["html","erb=eruby","html+erb=eruby.html"]
 
-" vim-liquid: Set subtype for Shopify alternate templates
+" vim-liquid: Set filetype for Shopify alternate templates
 au BufNewFile,BufRead */templates/**.liquid,*/layout/**.liquid,*/snippets/**.liquid
       \ let b:liquid_subtype = 'html' |
       \ set ft=liquid |
 au BufNewFile,BufRead */assets/**.js.liquid
       \ let b:liquid_subtype = 'javascript' |
       \ set ft=liquid |
+
+" Read vue as html
+au BufRead,BufNewFile *.vue set ft=html
 
 " ---------------------------------------------------------------------------
 "  Jump to last saved position of buffer when re-opening

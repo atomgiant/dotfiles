@@ -18,3 +18,5 @@
 --ignore-dir=public/dist
 --ignore-dir=public/javascripts/bower
 --ignore-dir=public/javascripts/dist
+--ignore-dir=public/packs
+--ignore-dir=public/packs-test
