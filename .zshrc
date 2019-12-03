@@ -13,7 +13,10 @@ source ~/.zsh/bundle_exec.zsh
 source ~/.zsh/zmv.zsh
 source ~/.env
 
-eval "$(rbenv init -)"
 export PATH="/opt/brew/opt/python/libexec/bin:$PATH"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+. $HOME/.asdf/asdf.sh
+
+. $HOME/.asdf/completions/asdf.bash

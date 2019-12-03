@@ -29,6 +29,6 @@ alias listening_ports='lsof -i -n -P | grep LISTEN'   # Show which processes are
 alias mmv='noglob zmv -W'
 
 # timeclock
-alias tc='/Users/tdavies/dev/timeclock/timeclock.rb'
-alias tct='/Users/tdavies/dev/timeclock/timeclock.rb -ts -g 99'
-alias tcw='/Users/tdavies/dev/timeclock/timeclock.rb -w -g 99'
+alias tc='/Users/tdavies/code/timeclock/timeclock.rb'
+alias tct='/Users/tdavies/code/timeclock/timeclock.rb -ts -g 99'
+alias tcw='/Users/tdavies/code/timeclock/timeclock.rb -w -g 99'

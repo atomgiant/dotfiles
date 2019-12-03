@@ -12,6 +12,7 @@ symlinks = {
   './.gitignore_global' => '~/.gitignore_global',
   './git/git_template' => '~/.git_template',
   './.ackrc' => '~/.ackrc',
+  './.asdfrc' => '~/.asdfrc',
   './.emacs' => '~/.emacs',
   './emacs' => '~/emacs',
   './bin/timeclock.rb' => '~/bin/'

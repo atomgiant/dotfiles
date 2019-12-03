@@ -4,7 +4,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$HOME/bin:/opt/l
 export PATH=$PATH:./node_modules/.bin
 
 # Our list of directories we can cd to from anywhere
-export CDPATH=.:~/dev
+export CDPATH=.:~/code
 
 # Setup terminal, and turn on colors
 #
