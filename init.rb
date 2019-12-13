@@ -13,6 +13,7 @@ symlinks = {
   './git/git_template' => '~/.git_template',
   './.ackrc' => '~/.ackrc',
   './.asdfrc' => '~/.asdfrc',
+  './.tool-versions' => '~/.tool-versions',
   './.emacs' => '~/.emacs',
   './emacs' => '~/emacs',
   './bin/timeclock.rb' => '~/bin/'
