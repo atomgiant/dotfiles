@@ -11,6 +11,7 @@ symlinks = {
   './.gitconfig' => '~/.gitconfig',
   './.gitignore_global' => '~/.gitignore_global',
   './git/git_template' => '~/.git_template',
+  './.ansible.cfg' => '~/.ansible.cfg',
   './.ackrc' => '~/.ackrc',
   './.asdfrc' => '~/.asdfrc',
   './.tool-versions' => '~/.tool-versions',
