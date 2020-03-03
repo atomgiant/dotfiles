@@ -438,6 +438,7 @@ au BufNewFile,BufRead */assets/**.js.liquid
 
 " Read vue as html
 au BufRead,BufNewFile *.vue set ft=html
+au BufRead,BufNewFile *.md.erb set ft=markdown
 
 " ---------------------------------------------------------------------------
 "  Jump to last saved position of buffer when re-opening

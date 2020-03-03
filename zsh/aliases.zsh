@@ -13,7 +13,7 @@ alias r='rails'
 # Bundler
 alias b='bundle'
 alias be='bundle exec'
-alias bi='bundle install --path vendor'
+alias bi='bundle install'
 
 # Postgres
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'

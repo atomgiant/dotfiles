@@ -14,10 +14,8 @@ symlinks = {
   './.ansible.cfg' => '~/.ansible.cfg',
   './.ackrc' => '~/.ackrc',
   './.asdfrc' => '~/.asdfrc',
+  './.bundle/config' => '~/.bundle/config',
   './.tool-versions' => '~/.tool-versions',
-  './.emacs' => '~/.emacs',
-  './emacs' => '~/emacs',
-  './bin/timeclock.rb' => '~/bin/'
 }
 
 symlinks.each do |source, target|

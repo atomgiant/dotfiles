@@ -13,7 +13,7 @@ source ~/.zsh/bundle_exec.zsh
 source ~/.zsh/zmv.zsh
 source ~/.env
 
-export PATH="/usr/local/bin:$HOME/Library/Python/2.7/bin:$HOME/.yarn/bin:$PATH"
+export PATH="/usr/local/bin:$HOME/bin:$HOME/.yarn/bin:$PATH"
 
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash

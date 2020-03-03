@@ -1,10 +1,8 @@
 *.log
 .env
-.powrc
 .DS_Store
 .bundle
 .vagrant
 coverage*
 doc/tags
-emacs/timelog*
 vendor/ruby
