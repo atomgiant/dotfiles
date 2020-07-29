@@ -14,6 +14,7 @@
 --ignore-dir=tmp
 --ignore-dir=vendor/assets
 --ignore-dir=vendor/ruby
+--ignore-dir=vendor/bundle
 --ignore-dir=bower_components
 --ignore-dir=public/dist
 --ignore-dir=public/javascripts/bower
