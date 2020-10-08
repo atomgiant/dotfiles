@@ -36,3 +36,6 @@ alias tmr='/Users/tdavies/code/timeclock/timer.rb'
 alias tss='/Users/tdavies/code/timeclock/timer.rb start'
 alias tsp='/Users/tdavies/code/timeclock/timer.rb stop'
 alias ts='/Users/tdavies/code/timeclock/timer.rb status'
+
+# git tag
+alias gtag='gtagname=`date -u +"deploy-%Y-%m-%d-%H-%M-%S"`;git tag $gtagname; git push origin $gtagname'
