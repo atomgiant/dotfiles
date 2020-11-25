@@ -12,6 +12,7 @@
 --ignore-dir=log
 --ignore-dir=public/assets
 --ignore-dir=tmp
+--ignore-dir=.tmp
 --ignore-dir=vendor/assets
 --ignore-dir=vendor/ruby
 --ignore-dir=vendor/bundle
