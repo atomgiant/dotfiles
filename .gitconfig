@@ -73,3 +73,6 @@
 	default = current
 [merge]
 	tool = gvimdiff
+[pull]
+	default = current
+	ff = only

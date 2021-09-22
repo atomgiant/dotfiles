@@ -92,6 +92,7 @@ set wildmenu                    " show possible matches for command completions 
 let NERDTreeWinSize=31                " how wide nerdtree ought to be
 let NERDTreeMinimalUI=1               " don't need to the noise
 let NERDTreeDirArrows=1               " prettier arrows
+let NERDTreeIgnore=[]
 
 
 " ----------------------------------------------------------------------------
