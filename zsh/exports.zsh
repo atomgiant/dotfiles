@@ -1,7 +1,5 @@
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$HOME/bin:/opt/local/bin:/opt/local/sbin:$PATH
-
-# add npm module binaries to path
-export PATH=$PATH:./node_modules/.bin
+# add yarn packages
+export PATH="$HOME/.yarn/bin:$PATH"
 
 # Our list of directories we can cd to from anywhere
 export CDPATH=.:~/code
@@ -24,5 +22,3 @@ export THOR_MERGE='gvimdiff'
 export DEBUG_ACTIVE_MERCHANT=true
 
 ulimit -n 2048
-
-

@@ -1,6 +1,5 @@
 #!/bin/sh
 set -e
-PATH="/usr/local/bin:/Users/$USER/.rbenv/shims:/Users/$USER/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 trap "rm -f .git/tags.61703" EXIT
 ctags --tag-relative -Rf.git/tags.61703 --exclude=.git --languages=-javascript,sql
 mv .git/tags.61703 .git/tags

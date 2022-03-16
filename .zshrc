@@ -13,7 +13,7 @@ source ~/.zsh/bundle_exec.zsh
 source ~/.zsh/zmv.zsh
 source ~/.env
 
-export PATH="/usr/local/bin:$HOME/bin:$HOME/.yarn/bin:$PATH"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 . $HOME/.asdf/asdf.sh
 # append completions to fpath
