@@ -16,6 +16,7 @@ symlinks = {
   './.asdfrc' => '~/.asdfrc',
   './.bundle/config' => '~/.bundle/config',
   './.tool-versions' => '~/.tool-versions',
+  'nvim/lua/user/' => '~/.config/nvim/lua/user/'
 }
 
 symlinks.each do |source, target|
