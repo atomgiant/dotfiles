@@ -20,7 +20,6 @@ Plugin 'mattn/emmet-vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'scrooloose/nerdtree'
-Plugin 'Townk/vim-autoclose'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
@@ -49,7 +48,7 @@ filetype plugin indent on     " required!
 set nocompatible
 let mapleader = ","
 set history=1000                              " lots of command line history
-set viminfo='10,\"100,:20,%,n~/.viminfo       " remember certain things when we exit
+set viminfo='10,\"0,:20,%,n~/.viminfo         " remember certain things when we exit
 set autoread                                  " reload files changed outside of Vim
 set autowrite                                 " some commands should cause an automatic write
 set nrformats=                                " improves incrementing when there are leading 0's.
@@ -211,6 +210,14 @@ nmap g<C-\> g]
 inoremap ;; <Esc>
 inoremap ¬ <Esc>
 inoremap jj <Esc>
+
+" auto expand brackets
+inoremap (; (<CR>);<C-c>O
+inoremap (, (<CR>),<C-c>O
+inoremap {; {<CR>};<C-c>O
+inoremap {, {<CR>},<C-c>O
+inoremap [; [<CR>];<C-c>O
+inoremap [, [<CR>],<C-c>O
 
 " auto complete shortcut
 imap <S-space> <C-n>

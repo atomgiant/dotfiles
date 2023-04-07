@@ -9,15 +9,13 @@ set cpoptions+=n        " start soft-wrap lines (and any prefix) in the line-num
 
 syntax enable
 set background=dark
+
 colorscheme solarized
-hi Normal guibg=Black
-hi rubyDefine guibg=Black
 
-" Don't want the line numbers to jump out and grab attention
-highlight LineNr guibg=#161616
-
-" Make it a little more prominent than the default so I can actually see it.
-highlight MatchParen guibg=#234B96
+hi Normal guibg=#0F0F0F
+hi rubyDefine guibg=#0F0F0F
+highlight LineNr guibg=#1F1F1F
+highlight MatchParen guibg=#404040
 
 " ----------------------------------------------------------------------------
 "  Window sizes
