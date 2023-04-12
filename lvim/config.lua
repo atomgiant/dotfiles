@@ -109,11 +109,6 @@ lvim.lsp.installer.setup.automatic_installation = false
 --     command = "prettier",
 --     filetypes = { "erb", "javascript", "ruby" },
 --   },
--- {
---   command = "standardjs",
---   args = { "--fix" },
---   filetypes = { "javascript" },
--- },
 -- }
 -- local linters = require "lvim.lsp.null-ls.linters"
 -- linters.setup {
@@ -124,12 +119,27 @@ lvim.lsp.installer.setup.automatic_installation = false
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
   {
+    "zbirenbaum/copilot-cmp",
+    event = "InsertEnter",
+    dependencies = { "zbirenbaum/copilot.lua" },
+    config = function()
+      vim.defer_fn(function()
+        require("copilot").setup()     -- https://github.com/zbirenbaum/copilot.lua/blob/master/README.md#setup-and-configuration
+        require("copilot_cmp").setup() -- https://github.com/zbirenbaum/copilot-cmp/blob/master/README.md#configuration
+      end, 100)
+    end,
+  },
+  {
     "max397574/better-escape.nvim",
     config = function()
       require("better_escape").setup()
     end,
   }
 }
+
+-- Can not be placed into the config method of the plugins.
+lvim.builtin.cmp.formatting.source_names["copilot"] = "(Copilot)"
+table.insert(lvim.builtin.cmp.sources, 1, { name = "copilot" })
 
 -- -- Autocommands (`:help autocmd`) <https://neovim.io/doc/user/autocmd.html>
 vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost" }, {
