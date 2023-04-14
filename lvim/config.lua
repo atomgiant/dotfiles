@@ -1,7 +1,3 @@
---[[
- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
- `lvim` is the global options object
-]]
 -- vim options
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
@@ -12,20 +8,18 @@ lvim.log.level = "info"
 lvim.format_on_save = {
   enabled = true,
   pattern = "*",
-  timeout = 1000,
+  timeout = 2000,
 }
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 local null_ls = require("null-ls")
 null_ls.setup({
-  debug = true,
+  -- debug = true,
   sources = {
     -- Formatters
-    null_ls.builtins.formatting.prettier_standard.with({
-      filetypes = { "html", "javascript", "ruby" },
+    null_ls.builtins.formatting.prettier.with({
+      filetypes = { "javascript", "ruby" },
     }),
-    -- Linters
-    null_ls.builtins.diagnostics.standardjs,
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
@@ -34,7 +28,7 @@ null_ls.setup({
         group = augroup,
         buffer = bufnr,
         callback = function()
-          vim.lsp.buf.format({ bufnr = bufnr })
+          vim.lsp.buf.format({ async = true, bufnr = bufnr })
         end,
       })
     end
@@ -47,9 +41,10 @@ null_ls.setup({
 -- keymappings <https://www.lunarvim.org/docs/configuration/keybindings>
 lvim.leader = ","
 -- add your own keymapping
-lvim.keys.normal_mode["<leader>sv"] = ":vsplit<CR>"
-lvim.keys.normal_mode["<leader>ss"] = ":split<CR>"
+lvim.keys.normal_mode["<leader><leader>v"] = ":vsplit<CR>"
+lvim.keys.normal_mode["<leader><leader>s"] = ":split<CR>"
 lvim.keys.normal_mode["<leader>x"] = ":x<CR>"
+lvim.keys.normal_mode["<space>"] = "<Plug>(MatchitNormalForward)"
 
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"

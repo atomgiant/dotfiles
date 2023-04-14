@@ -1,5 +1,5 @@
 # add yarn packages
-export PATH="$HOME/.yarn/bin:$HOME/.local/bin:node_modules/.bin:$PATH"
+export PATH="$HOME/.yarn/bin:$PATH"
 
 # Our list of directories we can cd to from anywhere
 export CDPATH=.:~/code

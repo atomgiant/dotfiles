@@ -32,3 +32,6 @@ alias ts='/Users/tdavies/code/timeclock/timer.rb status'
 
 # git tag
 alias gtag='gtagname=`date -u +"deploy-%Y-%m-%d-%H-%M-%S"`;git tag $gtagname; git push origin $gtagname'
+
+# lvim
+alias lvim='/Users/tdavies/.local/bin/lvim'
