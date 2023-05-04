@@ -44,7 +44,8 @@ lvim.leader = ","
 lvim.keys.normal_mode["<leader><leader>v"] = ":vsplit<CR>"
 lvim.keys.normal_mode["<leader><leader>s"] = ":split<CR>"
 lvim.keys.normal_mode["<leader>x"] = ":x<CR>"
-lvim.keys.normal_mode["<space>"] = "<Plug>(MatchitNormalForward)"
+lvim.keys.normal_mode["<space>"] = "<Plug>(matchup-%)"
+lvim.keys.visual_mode["<space>"] = "<Plug>(matchup-%)"
 
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
@@ -129,12 +130,21 @@ lvim.plugins = {
     config = function()
       require("better_escape").setup()
     end,
-  }
+  },
+  {
+    "andymass/vim-matchup",
+    init = function()
+      vim.g.matchup_matchparen_offscreen = { method = "popup" }
+    end,
+  },
 }
 
--- Can not be placed into the config method of the plugins.
+-- copilot
 lvim.builtin.cmp.formatting.source_names["copilot"] = "(Copilot)"
 table.insert(lvim.builtin.cmp.sources, 1, { name = "copilot" })
+
+-- matchup
+lvim.builtin.treesitter.matchup.enable = true
 
 -- -- Autocommands (`:help autocmd`) <https://neovim.io/doc/user/autocmd.html>
 vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost" }, {
