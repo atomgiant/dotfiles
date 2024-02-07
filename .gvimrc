@@ -1,8 +1,7 @@
 set lines=79 columns=272
 
 set guioptions=eg               " disable scrollbars, etc
-set guifont=Monaco:h12         " nice font
-" set guifont=Bitstream\ Vera\ Sans\ Mono:h12
+set guifont=Monaco:h13
 set number                      " show line numbers
 set showbreak=------>\  " line up soft-wrap prefix with the line numbers
 set cpoptions+=n        " start soft-wrap lines (and any prefix) in the line-number area

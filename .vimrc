@@ -10,34 +10,35 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " My bundles
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'chrisbra/Colorizer'
 Plugin 'chrisbra/csv.vim'
 Plugin 'duff/vim-trailing-whitespace'
 Plugin 'elixir-lang/vim-elixir'
-Plugin 'kien/ctrlp.vim'
 Plugin 'fidian/hexmode'
+Plugin 'github/copilot.vim'
+Plugin 'godlygeek/tabular'
 Plugin 'kana/vim-textobj-user'
+Plugin 'kien/ctrlp.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'othree/html5.vim'
+Plugin 'plasticboy/vim-markdown'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-liquid'
+Plugin 'tpope/vim-ragtag'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-rake'
-Plugin 'tpope/vim-ragtag'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
-Plugin 'godlygeek/tabular'
 Plugin 'yegappan/greplace'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'chrisbra/Colorizer'
-Plugin 'othree/html5.vim'
-Plugin 'plasticboy/vim-markdown'
 
 runtime macros/matchit.vim
 filetype plugin indent on     " required!
@@ -263,10 +264,6 @@ nnoremap <Leader>m @q
 " Hook up ctrl-i to navigate the jump list. I don't know why ctrl-i
 " doesn't seem to work for me by default.
 nmap <C-i> <C-tab>
-
-" spell check
-nnoremap <leader>p :setlocal spell spelllang=en_us<CR>
-nnoremap <leader>P :setlocal nospell<CR>
 
 " Better goto mark default
 nnoremap ' `
