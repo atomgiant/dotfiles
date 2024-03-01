@@ -13,6 +13,7 @@ Bundle 'gmarik/vundle'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'chrisbra/Colorizer'
 Plugin 'chrisbra/csv.vim'
+Plugin 'dense-analysis/ale'
 Plugin 'duff/vim-trailing-whitespace'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'fidian/hexmode'
@@ -288,6 +289,20 @@ nnoremap <leader>R :.Rake<CR>
 nnoremap <leader><leader>x :Hexmode<CR>
 
 " ---------------------------------------------------------------------------
+"  ALE
+" ---------------------------------------------------------------------------
+
+" Set this variable to 1 to fix files when you save them.
+let g:ale_fix_on_save = 1
+let g:ale_ruby_rubocop_executable = 'bundle'
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['eslint'],
+\   'json': ['eslint'],
+\   'ruby': ['rubocop'],
+\}
+
+" ---------------------------------------------------------------------------
 "  CtrlP
 " ---------------------------------------------------------------------------
 nnoremap <leader>f :CtrlP<CR>
@@ -492,5 +507,3 @@ augroup END
 if $TERM == 'screen'
   set term=xterm
 endif
-
-
